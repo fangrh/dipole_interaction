@@ -1,18 +1,14 @@
 ---
-title: Lindblad Equation
+title: The Note of Lindblad Equation
 ---
 
-
-
-# The Note of Lindblad Equation
-
-## The Fermi Golden rule
+# The Fermi Golden rule
 
 The Spontaneous emissions
 
 
 
-## The System and bath model
+# The System and bath model
 
 Base on [A simple derivation of Lindblad equation](https://doi.org/10.1590/S1806-11172013000100003)
 Consider a System interact with a bath, the Hamiltonian of system is $\hat{H}_S$ and the bath is $\hat{H}_B$.
