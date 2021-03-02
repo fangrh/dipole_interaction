@@ -7,3 +7,7 @@ $$
 \hat{H}=\hat{H}_S \otimes \Bbb{I} + \Bbb{I} \otimes \hat{H}_B + \hat{H}_{SB}
 $$
 
+Where $\hat{H}_{SB}$ is
+$$
+\hat{H}_{SB} = g(a^{\dagger}+a)(\sigma^{\dagger}+\sigma).
+$$
