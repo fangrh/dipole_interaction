@@ -8,7 +8,7 @@ title: Lindblad Equation
 
 ## The Fermi Golden rule
 
-
+The Spontaneous emissions
 
 
 
