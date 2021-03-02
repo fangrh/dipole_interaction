@@ -1,5 +1,13 @@
 # The Note of Lindblad Equation
 
+## The Fermi Golden rule
+
+
+
+
+
+## The System and bath model
+
 Base on [A simple derivation of Lindblad equation](https://doi.org/10.1590/S1806-11172013000100003)
 Consider a System interact with a bath, the Hamiltonian of system is $\hat{H}_S$ and the bath is $\hat{H}_B$.
 And the total Hamiltonian is 
@@ -11,3 +19,4 @@ Where $\hat{H}_{SB}$ is
 $$
 \hat{H}_{SB} = \hbar(\hat{S}^{\dagger}\hat{B}+\hat{S}\hat{B}^{\dagger}).
 $$
+
