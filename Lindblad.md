@@ -32,8 +32,14 @@ $$ {#eq:eq2}
 
 The Halmiltonian is 
 $$
-\hat{H}= \hbar \omega \hat{\sigma}^\dagger \hat{\sigma} + \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k}}\hat{a}_{\vec{k},\alpha}-\sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^\dagger\hat{a}_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^\dagger_{\vec{k}, \alpha})
-$$ {#eq:eq3}
+\hat{H} = \hbar \omega \hat{\sigma}^{\dagger} \hat{\sigma} + 
+\sum_{\vec{k},\alpha}\hbar\omega_{\vec{k},\alpha} - \sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^{\dagger} \hat{a}_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^{\dagger}_{\vec{k} ,\alpha} )
+$$
+
+
 Here the $\alpha$ is the polarization mode.
 
 考虑态演化为
+$$
+\mid\psi(t)\rangle = c(t)qket
+$$
