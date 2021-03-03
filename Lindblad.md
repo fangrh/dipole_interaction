@@ -2,7 +2,11 @@
 title: The Note of Lindblad Equation
 ---
 
-
+$$
+\begin{align*}
+\newcommand{\Ha}{\hat{H}}
+\end{align*}
+$$
 
 # The Fermi Golden rule
 
@@ -32,7 +36,4 @@ $$
 $$ {#eq:eq3}
 Here the $\alpha$ is the polarization mode.
 
-
-
-
-
+考虑态演化为
