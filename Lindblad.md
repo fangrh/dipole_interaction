@@ -2,7 +2,11 @@
 title: The Note of Lindblad Equation
 ---
 
-
+$$
+\begin{align*}
+\newcommand{\Ha}{\hat{H}}
+\end{align*}
+$$
 
 # The Fermi Golden rule
 
@@ -24,7 +28,7 @@ $$
 \hat{H}_{SB} = \hbar(\hat{S}^{\dagger}\hat{B}+\hat{S}\hat{B}^{\dagger}).
 $$ {#eq:eq2}
 
-## The Cavity QED
+# The Cavity QED
 
 The Halmiltonian is 
 $$
@@ -32,7 +36,4 @@ $$
 $$ {#eq:eq3}
 Here the $\alpha$ is the polarization mode.
 
-
-
-
-
+考虑态演化为
