@@ -2,6 +2,16 @@
 title: The Note of Lindblad Equation
 ---
 
+$$
+\begin{equation*}
+\newcommand{\ha}{\hat{a}}
+\newcommand{\hs}{\hat{\sigma}}
+\newcommand{\vk}{\vec{k}}
+\end{equation*}
+$$
+
+
+
 # The Fermi Golden rule
 
 The Spontaneous emissions
@@ -22,4 +32,13 @@ $$
 \hat{H}_{SB} = \hbar(\hat{S}^{\dagger}\hat{B}+\hat{S}\hat{B}^{\dagger}).
 $$ {#eq:eq2}
 
-The Cavity QED
+## The Cavity QED
+
+The Halmiltonian is 
+$$
+\hat{H}= \hbar \omega \hat{\sigma}^\dagger \hat{\sigma} + \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k}}\hat{a}_{\vec{k},\alpha}-\sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^\dagger\ha_{\vk,\alpha}+g^*_{\vk,\alpha}\hs \ha^\dagger_{\vk, \alpha})
+$$ {#eq:eq3}
+Here the $\alpha$ is the polarization mode.
+
+
+
