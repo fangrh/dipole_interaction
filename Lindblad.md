@@ -28,7 +28,7 @@ $$ {#eq:eq2}
 
 The Halmiltonian is 
 $$
-\hat{H}= \hbar \omega \hat{\sigma}^\dagger \hat{\sigma} + \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k}}\hat{a}_{\vec{k},\alpha}-\sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^\dagger\ha_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^\dagger_{\vec{k}, \alpha})
+\hat{H}= \hbar \omega \hat{\sigma}^\dagger \hat{\sigma} + \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k}}\hat{a}_{\vec{k},\alpha}-\sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^\dagger\hat{a}_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^\dagger_{\vec{k}, \alpha})
 $$ {#eq:eq3}
 Here the $\alpha$ is the polarization mode.
 
