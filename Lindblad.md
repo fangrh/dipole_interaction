@@ -30,9 +30,10 @@ $$ {#eq:eq2}
 
 # The Cavity QED
 
+这个是基于该[知乎](file:///C:/Users/fangruihuan/Zotero/storage/G7SQNMR2/139761346.html)的笔记
+
 The Halmiltonian is 
 $$
-<<<<<<< HEAD
 \hat{H} = \hbar \omega \hat{\sigma}^{\dagger} \hat{\sigma} + 
 \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k},\alpha} - \sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^{\dagger} \hat{a}_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^{\dagger}_{\vec{k} ,\alpha} )
 $$
@@ -42,12 +43,9 @@ Here the $\alpha$ is the polarization mode.
 
 考虑态演化为
 $$
-\mid\psi(t)\rangle = c(t)qket
+\mid\psi(t)\rangle = c(t)e^{-i\omega t} \mid{2}\rangle\mid{0}\rangle + \sum_{\vec{k},\alpha}c_{\vec{k},\alpha}(t)e^{-i\omega_{k}t}\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle
 $$
-=======
-\hat{H}= \hbar \omega \hat{\sigma}^\dagger \hat{\sigma} + \sum_{\vec{k},\alpha}\hbar\omega_{\vec{k}}\hat{a}_{\vec{k},\alpha}-\sum_{\vec{k},\alpha}\hbar(g_{\vec{k},\alpha}\hat{\sigma}^\dagger\hat{a}_{\vec{k},\alpha}+g^*_{\vec{k},\alpha}\hat{\sigma} \hat{a}^\dagger_{\vec{k}, \alpha})
-$$ {#eq:eq3}
-Here the $\alpha$ is the polarization mode.
 
-考虑态演化为
->>>>>>> 9a5a6383b5b915babb7c95a3c53cca50c0fc3e55
+初始时刻我们假设全部处于激发态
+
+$c(0)=1; c_{\vec{k},\alpha}(0)=0$
