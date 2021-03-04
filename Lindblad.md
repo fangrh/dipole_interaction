@@ -59,7 +59,7 @@ $$
 \begin{equation}
 \begin{aligned}
 LHS=&\left(\dot{c}(t)e^{-i\omega t}-i\omega c(t)e^{-i\omega t}\right)\mid{2}\rangle\mid{0}\rangle +\\
-&\sum_{\vec{k},\alpha}\left(\dot{c}_{\vec{k},\alpha}(t)e^{-i\omega_k t}+-i\omega_{k}c_{\vec{k},\alpha}(t)e^{-i\omega_{k}t}\right)\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle
+&\sum_{\vec{k},\alpha}\left(\dot{c}_{\vec{k},\alpha}(t)e^{-i\omega_k t}-i\omega_{k}c_{\vec{k},\alpha}(t)e^{-i\omega_{k}t}\right)\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle
 \end{aligned}
 \end{equation}
 $$
@@ -67,8 +67,9 @@ $$
 $$
 \begin{equation}
 \begin{aligned}
-RHS=&-i\omega c(t) e^{-i\omega t}\mid{2}\rangle\mid{0}\rangle 
-+ \sum_{\vec{k},\alpha}
+RHS=&-i\omega c(t) e^{-i\omega t}\mid{2}\rangle\mid{0}\rangle \\
+&- \sum_{\vec{k},\alpha}-i \omega_{\vec{k},\alpha}c_{\vec{k},\alpha}(t)e^{-i\omega_{k}t}\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle\\
+&\sum_{\vec{k},\alpha}-i\left(g_{\vec{k},\alpha}c_{\vec{k},\alpha}(t)e^{-i\omega_k t}\mid{2}\rangle\mid{0}\rangle+g_{\vec{k},\alpha}^* c(t)e^{-i\omega t}\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle \right)
 \end{aligned}
 \end{equation}
 $$
