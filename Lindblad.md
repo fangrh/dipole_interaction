@@ -46,6 +46,8 @@ $$
 \mid\psi(t)\rangle = c(t)e^{-i\omega t} \mid{2}\rangle\mid{0}\rangle + \sum_{\vec{k},\alpha}c_{\vec{k},\alpha}(t)e^{-i\omega_{k}t}\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle
 $$
 
+在此我们只考虑$\mid{2}\rangle\mid{0}\rangle$和$\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle$这些项, 因为这两项的能量比较接近, 而$\mid{2}\rangle\mid{1_{\vec{k},\alpha}}\rangle$和$\mid{1}\rangle\mid{0}\rangle$这些项的能量和$\mid{2}\rangle\mid{0}\rangle$相差太大,导致跃迁的概率会低一些.
+
 初始时刻我们假设全部处于激发态
 
 $c(0)=1; c_{\vec{k},\alpha}(0)=0$
@@ -72,5 +74,14 @@ RHS=&-i\omega c(t) e^{-i\omega t}\mid{2}\rangle\mid{0}\rangle \\
 &\sum_{\vec{k},\alpha}-i\left(g_{\vec{k},\alpha}c_{\vec{k},\alpha}(t)e^{-i\omega_k t}\mid{2}\rangle\mid{0}\rangle+g_{\vec{k},\alpha}^* c(t)e^{-i\omega t}\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle \right)
 \end{aligned}
 \end{equation}
+$$
+
+分别考虑$\mid{2}\rangle\mid{0}\rangle$和$\mid{1}\rangle\mid{1_{\vec{k},\alpha}}\rangle$这些项
+$$
+\dot{c}(t)=-i\sum_{\vec{k},\alpha}g_{\vec{k},\alpha}c_{\vec{k},\alpha}e^{i(\omega-\omega_k) t}
+$$
+
+$$
+\dot{c}_{\vec{k},\alpha}(t)e^{-i\omega_k t}=-ig^*_{\vec{k},\alpha}c(t)e^{-i\omega t}
 $$
 
