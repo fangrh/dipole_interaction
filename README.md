@@ -1,5 +1,2 @@
 # dipole_interaction
-This is about a note of dipole interaction
-$$
-\hat{H}=\hbar \omega \hat{\sigma}^{\dagger}\hat{\sigma}
-$$
+[Lindblad equation](https://fangrh.github.io/dipole_interaction/Lindblad.html)
