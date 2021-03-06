@@ -85,3 +85,62 @@ $$
 \dot{c}_{\vec{k},\alpha}(t)e^{-i\omega_k t}=-ig^*_{\vec{k},\alpha}c(t)e^{-i\omega t}
 $$
 
+从该知乎可以看到实际上激发态的衰减是由于二能级体系和光场模式耦合在一起导致的, 这样激发态就只有一个,而基态有很多个,因此不断扩散就导致激发态容易衰减到基态了.
+
+## Lindblad equation中的衰减$\Gamma$是怎么导致的
+
+### 马尔科夫近似
+
+首先我们用马尔科夫近似得到光子湮灭算符的演化
+$$
+\frac{d \hat{a}_{\lambda}}{dt}=\frac{1}{i\hbar}\left[\hat{a}_{\lambda},\hat{H}\right],
+$$
+那么可以得到
+$$
+\frac{d \hat{a}_{\lambda}}{dt}=-i\omega_{\lambda}\hat{a}_{\lambda}+\sum_{\alpha}g^{\lambda}\cdot (\hat{\mathbf{b}}_{\alpha}+\hat{\mathbf{b}}^{\dagger}_{\alpha})e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}
+\label{#eq:haisenbao}
+$$
+其齐次方程解为
+$$
+\hat{a}_{\lambda}\left(t\right)=\hat{a}_{\lambda}(0)e^{-i\omega_{\lambda} t}
+$$
+利用马尔科夫近似可以求解Eq. $\ref{#eq:haisenbao}$
+
+首先如果不用马尔科夫近似, Eq. $\ref{#eq:haisenbao}$的解应为
+$$
+\hat{a}_{\lambda}(t)=\hat{a}_{\lambda}(0)e^{-i\omega_{\lambda}t}+\int_{0}^{t}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot (\hat{\mathbf{b}}_{\alpha}\left(t^\prime\right)+\hat{\mathbf{b}}_{\alpha}\left(t^\prime\right)^{\dagger})e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}e^{-i\omega_{\lambda}(t-t^\prime)}dt^{\prime}
+\label{eq13}
+$$
+一般而言, 在海森堡表象下$\hat{\mathbf{b}}_{\alpha}(t^\prime)=\hat{\mathbf{b}}_{\alpha}(0)e^{-i\omega_0 t^\prime}$, $\hat{\mathbf{b}}^{\dagger}_{\alpha}(t^\prime)=\hat{\mathbf{b}}^{\dagger}_{\alpha}(0)e^{i\omega_0 t^\prime}$
+
+因此Eq. $\ref{eq13}$第二项的$\hat{\mathbf{b}}_{\alpha}$项可以写成
+$$
+\begin{equation}
+\begin{aligned}
+&\int_{0}^{t}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot \hat{\mathbf{b}}_{\alpha}(0)e^{-i\omega_0 t^\prime}e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}e^{-i\omega_{\lambda}(t-t^\prime)}dt^{\prime}\\
+=& e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}\int_{0}^{t}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot \hat{\mathbf{b}}_{\alpha}(0)e^{-i\omega_0 t} e^{i\omega_0 (t-t^\prime)}e^{-i\omega_{\lambda}(t-t^\prime)}dt^{\prime}\\
+= & e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}\int_{0}^{t}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot \hat{\mathbf{b}}_{\alpha}(t) e^{i\omega_0 (t-t^\prime)}e^{-i\omega_{\lambda}(t-t^\prime)}dt^{\prime}\\
+= & e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot \hat{\mathbf{b}}_{\alpha}(t)\int_{0}^{t}e^{-i(\omega_{\lambda}-\omega_0)(t-t^\prime)}dt^{\prime}\\
+= & e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}\sum_{\alpha}\mathbf{g}^{\lambda}\cdot \hat{\mathbf{b}}_{\alpha}(t)\int_{0}^{t}e^{-i(\omega_{\lambda}-\omega_0)\tau}d\tau\\
+\end{aligned}
+\end{equation}
+\label{eq14}
+$$
+其中$\tau=t-t^\prime$,对于Eq. $\ref{eq14}$, 我们可以看出$\hat{a}_{\lambda}(t)$与$(0,t)$区间内的所有时间系统的状态都是相关的,但是其中的积分项在$t\to +\infty$的时候是收敛于一个值的, 即
+$$
+\begin{equation}
+\begin{aligned}
+\int_{0}^{+\infty}e^{-i\omega \tau}d\tau =& \lim_{\eta\to 0^{+}}\int_{0}^{+\infty}e^{-i\omega \tau-\eta \tau}d\tau\\
+=&\lim_{\eta\to 0^{+}}\frac{1}{\eta+i\omega}\\
+=&\lim_{\eta\to 0^{+}}\frac{\eta-i\omega}{\eta^2+\omega^2}\\
+=&\lim_{\eta\to 0^{+}}\frac{\eta}{\eta^2+\omega^2}-\lim_{\eta\to 0^{+}}\frac{i\omega}{\eta^2+\omega^2}\\
+=& \pi\delta(\omega)-i\mathrm{P}\frac{1}{\omega},
+\end{aligned}
+\end{equation}
+$$
+因此我们可以用马尔科夫近似,我们对积分进行延拓, 认为处于稳态时当前状态只和当前或者前一个状态有关,和其它状态无关,Eq. $\ref{eq13}$可以写成
+$$
+\hat{a}_{\lambda}(t)=\hat{a}_{\lambda}(0)e^{-i\omega_{\lambda}t}+\sum_{\alpha}\mathbf{g}^{\lambda}\cdot (\hat{\mathbf{b}}_{\alpha}\left(t\right)\zeta(\omega_\lambda-\omega_0)+\hat{\mathbf{b}}_{\alpha}\left(t\right)^{\dagger}\zeta(\omega_\lambda-\omega_0))e^{-i\mathbf{k}_{\lambda}\cdot \mathbf{r}_{\alpha}}
+$$
+
+

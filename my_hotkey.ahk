@@ -81,35 +81,74 @@ return
 send,\sum_{{}{}}{Left}
 return
 
+::fint::
+sendRaw,\int_{}^{}
+send,{Left 4}
+return
+
+::limeta::
+sendRaw,\lim_{\eta\to 0^{+}}
+return
+
+::int0infty::
+sendRaw,\int_{0}^{+\infty}
+return
+
 ;math operator
 ::partialt::
 sendRaw,\frac{\partial}{\partial t}
 return
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;quantum opterator
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-::qohh::
+::hath::
 sendRaw,\hat{H} 
 return
 
-::qoha::
+::hata::
 sendRaw,\hat{a}
 return
 
-::qohad::
+::hatad::
 sendRaw,\hat{a}^{\dagger}
 return
 
-::qohs::
+::hats::
 sendRaw,\hat{\sigma}
 return
 
-::qohsd::
+::hatsd::
 sendRaw,\hat{\sigma}^{\dagger}
 return
 
+::hatal::
+sendRaw,\hat{a}_{\lambda}
+return
+
+::hatb::
+sendRaw,\hat{b}
+return
+
+::hatbd::
+sendRaw,\hat{b}^{\dagger}
+return
+
+::hatba::
+sendRaw,\hat{b}_{\alpha}
+return
+
+::hatbda::
+sendRaw,\hat{b}^{\dagger}_{\alpha}
+return
+
+::hatbfba::
+sendRaw,\hat{\mathbf{b}}_{\alpha}
+return
+
+::hatbfbda::
+sendRaw,\hat{\mathbf{b}}^{\dagger}_{\alpha}
+return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;quantum state
@@ -134,4 +173,33 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ::dotc::
 sendRaw,\dot{c}
+return
+
+::mathbf::
+sendRaw,\mathbf{}
+send,{Left}
+return
+
+::lr()::
+sendRaw,\left(\right)
+send,{Left 7}
+return
+
+::lr[]::
+sendRaw,\left[\right]
+send,{Left 7}
+return
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Latex code
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+::eqalign::
+sendRaw,\begin{equation}
+send,{Enter}
+sendRaw,\begin{aligned}
+send,{Enter 2}
+sendRaw,\end{aligned}
+send,{Enter}
+sendRaw,\end{equation}
+send,{Up 2}
 return
